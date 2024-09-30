@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Résultats des joueurs
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  body
+    .container.text-center.mt-5
+      h1.text-center Résultats des joueurs
+      tr 
+      if players && players.length > 0
+            table.table.table-bordered
+                  thead 
+                        tr 
+                              th Nom d'utilisateur 
+                              th Score 
+                  tbody 
+                        each player in players 
+                              tr 
+                                    td= player.username 
+                                    td= player.score || 0
+      else 
+            p Aucun joueur trouvé
+.text-center
+    a(href="/" , class='btn btn-link') Retour à l'accueil
+    

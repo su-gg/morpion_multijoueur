@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title Morpion
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/clients.js")
+  body
+    .container.mt-5
+      h1.text-center Morpion
+      h2.text-center Bienvenue, #{username}
+      .row.justify-content-center
+        .col-md-6
+          div#status
+          div#playerScores
+          table#gameboard.table.table-bordered
+            tbody
+              each row in [0,1,2]
+                tr
+                  each col in [0,1,2]
+                    td.cell(data-row=row, data-col=col)
+                
+
+.text-center
+      a(href='/', class='btn btn-link') Retour 
+      a(href="/scores", class='btn btn-link') Résultats 
+    
+      
+
+      
+
+      
+      
+   
+
+

@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Inscription
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  body
+    .container.mt-5
+      h2.text-center Créer un compte
+      form(action='/register', method='POST')
+        .form-group
+          label(for='username') Pseudonyme
+          input.form-control(type='text', id='username', name='username', required, autocomplete='username')
+        .form-group
+          label(for='password') Mot de passe
+          input.form-control(type='password', id='password', name='password', required, autocomplete='new-password')
+        .text-center
+          button.btn.btn-success(type='submit') S'inscrire
+          a(href='/', class='btn btn-link') Retour 
